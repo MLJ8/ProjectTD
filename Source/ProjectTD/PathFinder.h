@@ -23,7 +23,9 @@ UCLASS()
 class PROJECTTD_API APathFinder : public AActor
 {
 	GENERATED_BODY()
-
+private:
+	//寻路点显示时间
+	const int32 drawtime=5;
 protected:
 	int32 MapRow=8;
 	int32 MapCol=10;

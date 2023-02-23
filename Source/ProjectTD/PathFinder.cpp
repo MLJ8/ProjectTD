@@ -92,7 +92,7 @@ void APathFinder::FindPathStep(int rStart, int cStart, int rEnd, int cEnd)
 	//判断OpenList中还有没有待计算的点
 	if (index < 0)
 	{
-		UE_LOG(LogTemp, Error, TEXT("No path found, algorithm failed!!!"));
+		UE_LOG(LogTemp, Warning, TEXT("No path found, algorithm failed!!! rstart %d cstart %d rend %d cend %d"),rStart,cStart,rEnd,cEnd);
 		bFindPathFinish=true;
 		return;
 	}
@@ -101,7 +101,7 @@ void APathFinder::FindPathStep(int rStart, int cStart, int rEnd, int cEnd)
 	
 	// UE_LOG(LogTemp,Warning,TEXT("Draw %d %d"),p.Y,p.X)
 	// 蓝色点：FindPathStep阶段，对SelectPointInOpenList筛选出的点进行分析。
-	DrawDebugPoint(GetWorld(), FVector(p.X * 100, p.Y * 100, 100), 20, FColor::Blue, false, 5);
+	DrawDebugPoint(GetWorld(), FVector(p.X * 100, p.Y * 100, 100), 20, FColor::Blue, false, drawtime);
 
 	if (IsEndPoint(p)) // 如果是终点，算法结束，构建路径
 		{
@@ -150,7 +150,7 @@ void APathFinder::BuildPath(FPoint p)
 		// UE_LOG(LogTemp,Warning,TEXT("%d-%d"),item.Y,item.X);
 		PathPoint.Add(FVector(item.X * 100,item.Y * 100,100));
 		// 绿色点：BuildPath阶段，最终路径。
-		DrawDebugPoint(GetWorld(), FVector(item.X * 100, item.Y * 100, 100), 20, FColor::Green, false, 5);
+		DrawDebugPoint(GetWorld(), FVector(item.X * 100, item.Y * 100, 100), 20, FColor::Green, false, drawtime);
 	}
 }
 
@@ -206,7 +206,7 @@ void APathFinder::ProcessPoint(int y, int x, int parentIndex)
 		p.Cost = Cost(p);
 		OpenSet.Add(p);
 		// 红色点：ProcessPoint阶段，将该点放入OpenSet。
-		DrawDebugPoint(GetWorld(), FVector(p.X * 100, p.Y * 100, 100), 20, FColor::Red, false,5);
+		DrawDebugPoint(GetWorld(), FVector(p.X * 100, p.Y * 100, 100), 20, FColor::Red, false,drawtime);
 	}
 }
 

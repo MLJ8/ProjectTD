@@ -2,6 +2,7 @@
 
 
 #include "Install_Base.h"
+#include"Components/InterpToMovementComponent.h"
 
 // Sets default values
 AInstall_Base::AInstall_Base()
