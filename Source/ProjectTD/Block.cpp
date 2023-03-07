@@ -29,6 +29,8 @@ void ABlock::SetTextRenderText(FString s)
 		Text->SetTextRenderColor(FColor(0,0,255));
 	else if(s.Equals("p"))
 		Text->SetTextRenderColor(FColor(0,255,0));
+	else if(s.Equals("0"))
+		Text->SetTextRenderColor(FColor(255,255,255));
 	Text->SetText(s);
 }
 
