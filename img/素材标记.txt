@@ -34,3 +34,47 @@ UI
 15 - 70 progress bars
 地形
 21 - Vector landscape elements - platforms - for games
+
+
+机枪
+25-101-150 Sci-Fi Flat icons-108
+25-101-150 Sci-Fi Flat icons-132
+08_100 weapons icons-98
+36_200 Survival Flat Icons 093
+地雷、刺钉
+25-101-150 Sci-Fi Flat icons-110
+36_200 Survival Flat Icons 152
+狙击
+25-101-150 Sci-Fi Flat icons-135
+08_100 weapons icons-36
+08_100 weapons icons-83
+08_100 weapons icons-84
+36_200 Survival Flat Icons 146
+单发
+25-101-150 Sci-Fi Flat icons-130
+08_100 weapons icons-03
+胶水
+36_200 Survival Flat Icons 043
+02_110 survival icons 1_100-83
+36_200 Survival Flat Icons 072
+毒药
+10_200 Skills icon 03 104
+13_90 Magic potion Icons 绿色的都可以
+02_110 survival icons 1_100-12
+AOE
+25-101-150 Sci-Fi Flat icons-128
+08_100 weapons icons-06
+08_100 weapons icons-07
+08_100 weapons icons-20
+地火
+02_110 survival icons 1_100-17
+02_110 survival icons 1_100-59
+管道
+36_200 Survival Flat Icons 068
+02_110 survival icons 1_100-80
+25-101-150 Sci-Fi Flat icons-106
+25-101-150 Sci-Fi Flat icons-143
+25-1-100 Sci-Fi Flat icons-72
+
+
+
