@@ -143,7 +143,7 @@ void APathFinder::BuildPath(FPoint p)
 			}
 		}
 	}
-	PathPoint.Add(FVector(GetActorLocation().X,GetActorLocation().Y,100));
+	// PathPoint.Add(FVector(GetActorLocation().X,GetActorLocation().Y,100));
 	for(int i=PathRes.Num()-1;i>=0;i--)
 	{
 		FPoint item=PathRes[i];
