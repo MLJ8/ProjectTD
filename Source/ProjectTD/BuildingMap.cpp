@@ -34,13 +34,14 @@ void ABuildingMap::Tick(float DeltaTime)
 
 }
 
-void ABuildingMap::ReadCsv()
+bool ABuildingMap::ReadCsv()
 {
 	//获得文件路径
 	FString path=FPaths::ProjectDir()+"Level/"+FileName;
 	if (!FPlatformFileManager::Get().GetPlatformFile().FileExists(*path))
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s not exist"), *path);
+		return false;
 	}
 	FString tmp;
 	//将文件内容写入tmp中，
@@ -73,7 +74,8 @@ void ABuildingMap::ReadCsv()
 	// 		pc.Empty();
 	// 	}
 	// }
-	
+
+	return true;
 }
 
 void ABuildingMap::ClearBlock()
@@ -113,7 +115,11 @@ void ABuildingMap::UpdateOneTextRender(int row, int col)
 //地图坐标轴为x轴正方向为列递增，y轴正方向为行递增
 void ABuildingMap::CreateMap()
 {
-	ReadCsv();
+	//如果无法读取文件就结束
+	if(!ReadCsv())
+	{
+		return;
+	}
 	ClearBlock();
 	if(GEditor)
 	{

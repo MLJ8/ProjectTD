@@ -53,7 +53,7 @@ public:
 	UFUNCTION(BlueprintCallable, CallInEditor)
 	void CreateMap();
 	//读取csv信息并存储到MapInfoArray
-	virtual void ReadCsv();
+	virtual bool ReadCsv();
 	//清除所有的block
 	UFUNCTION(BlueprintCallable, CallInEditor)
 	void ClearBlock();
